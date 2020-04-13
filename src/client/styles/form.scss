@@ -1,0 +1,52 @@
+#tripForm {
+    border: none;
+    width: 90%;
+    margin: 50px auto;
+
+    h2 {
+        font-size: 2em;
+        margin-bottom: 30px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    button {
+        background-color: #8c824f;
+        color: #fff;
+        font-size: 0.9em;
+        border: 1px solid #fff;
+        padding: 15px;
+        width: 100px;
+        display: block;
+        margin-top: 25px;
+    }
+
+    label {
+        font-family: 'Merriweather', serif;
+    }
+
+    button:hover {
+        background-color: #736623;
+    }
+
+    input, select {
+        display: block;
+        padding: 5px 20px;
+        width: 100%;
+        min-width: 200px;
+        height: 44px;
+        margin: 5px auto 25px auto;
+        font-size: 1em;
+        background-color: white;
+        color: #01163b;
+        border: 1px solid #01163b;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    #tripForm {
+        width: 300px;
+        margin: 70px auto;
+    }
+}
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Travel Planner</title>
+        <link href= 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css' rel='stylesheet'> 
+        <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+        <script src= "https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> 
+       <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>--> 
+    </head>
+
+    <body>
+        <div id="container">
+        <header>
+            <div class="logo-container">
+                <img class="logo" src="images/Travel_Planner_logo.jpg" />
+            </div>
+        </header>
+        <main>
+            <h1 id="upcomingTripsTitle" style="display: none">Your Upcoming Trips</h1>
+            <section id="upcomingTrips">
+               
+            </section>
+          
+            <form id="tripForm" style="display: block">
+                <h2>Trip details</h2>
+                <label for="date">Departure Date:</label>
+                <input type="text" name="date" id="date_picker" value="" placeholder="mm/dd/yyyy">
+
+                <label for="returnDate">Return Date</label>
+                <input type="text" name="returnDate" id="returnDatePicker" value="" placeholder="mm/dd/yyyy">
+
+                <script>$(document).ready(function () {
+                        $(function () {
+                            $("#date_picker").datepicker();
+                            $("#returnDatePicker").datepicker();
+                        });
+                    })</script>
+
+                <label for="city">Destination City</label>
+                <input type="text" name="city" id="city" value="" placeholder="Enter a City">
+
+                <span id="errors" aria-live="polite"></span>
+                <button id="submit" type="submit">Submit</button>
+
+            </form>
+            <div id="addTripDiv" style="display: none">
+                <div id="addTripButton" style="display: block">
+                    <button id="addTripButton" type="submit">Add a Trip</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>UDACITY Project by Shivi</p>
+        </footer>
+    </div>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js');
+            });
+        }
+    </script>
+    </body>
+</html>
